@@ -3,6 +3,7 @@ name:Send Email
 on:
 repository_dispatch:
   types:[form:submission]
+  url:(https://labibliateca.github.io/Mensajes/index.html)
 
 jobs:
   send-email:
@@ -11,7 +12,7 @@ jobs:
      -names: Send Email
      uses:github-actions/send
 -email@vl
-  with:server: (link unavailable)
+  with:server: (https://labibliateca.github.io/Mensajes/)
   port 587
   username: $
   {{ secrets.EMAILUSER }}
