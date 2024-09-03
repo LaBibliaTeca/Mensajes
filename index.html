@@ -7,44 +7,13 @@
 </head>
 <body>
     <form id="contact-form">
-       <label for="user_name">Enter your username:</label>
         <input type="text" name="user_name" placeholder="Tu nombre" required />
-          <label for="email">Enter your username:</label>
         <input type="email" name="user_email" placeholder="Tu email" required />
         <textarea name="message" placeholder="Tu mensaje" required></textarea>
         <button type="submit">Enviar Email</button>
     </form>
 
-    <!-- Incluir EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            emailjs.init("Dskmm59c47cnfcmWd"); // Reemplaza con tu User ID de EmailJS
-        })();
-    </script>
-
- <script type="text/javascript">
-  document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    // Deshabilitar el botón para evitar envíos múltiples
-    const submitButton = event.target.querySelector('button[type="submit"]');
-    submitButton.disabled = true;
-    submitButton.textContent = "Enviando...";
-
-    // Enviar el formulario usando EmailJS
-    emailjs.sendForm('service_2ajarrr', 'template_biqdvfi', this)
-      .then(function() {
-        alert('Correo enviado exitosamente!');
-        submitButton.textContent = "Enviar Email";  // Restablecer el texto del botón
-        submitButton.disabled = false;
-      }, function(error) {
-        alert('Error al enviar el correo: ' + JSON.stringify(error));
-        submitButton.textContent = "Enviar Email";  // Restablecer el texto del botón
-        submitButton.disabled = false;
-      });
-  });
-</script>
-
+    <!-- Enlace al archivo de JavaScript externo -->
+    <script src="email.js"></script>
 </body>
 </html>
