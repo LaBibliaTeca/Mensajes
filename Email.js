@@ -6,7 +6,7 @@
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();  // Previene la recarga de la página
 
-    // Enviar el formulario usando EmailJS
+    // Enviar el formulario usando EmailJS 
     emailjs.sendForm('service_2ajarrr', 'template_biqdvfi', this)
         .then(function() {
             alert('Correo enviado exitosamente!');
