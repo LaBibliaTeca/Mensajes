@@ -1,6 +1,6 @@
 // Incluir EmailJS SDK
 (function() {
-    emailjs.init("Dskmm59c47cnfcmWd"); // Reemplaza "YOUR_PUBLIC_KEY" con tu clave pública
+    emailjs.init("_vmfJzPaAfLKlio-k"); // Reemplaza "YOUR_PUBLIC_KEY" con tu clave pública
 })();
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
