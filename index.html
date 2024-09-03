@@ -1,41 +1,76 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Email</title>
+</head>
+<body>
+    <form id="contact-form">
+        <input type="text" name="user_name" placeholder="Tu nombre" required />
+        <input type="email" name="user_email" placeholder="Tu email" required />
+        <textarea name="message" placeholder="Tu mensaje" required></textarea>
+        <button type="submit">Enviar Email</button>
+    </form>
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <form id="contact-form">
-            <input type="text" name="user_name" placeholder="Your Name" required />
-            <input type="email" name="user_email" placeholder="Your Email" required />
-            <textarea name="message" placeholder="Your Message"></textarea>
-            <button type="submit">Send Email</button>
-          </form>
-          
-        
-        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-        <script type="text/javascript">
-          (function() {
-            emailjs.init("Dskmm59c47cnfcmWd");
-          })();
-        </script>
-        <script type="text/javascript">
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-              event.preventDefault();
-          
-              emailjs.sendForm(service_2ajarrr, template_s36hvxa, this)
+    <!-- Incluir EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Email</title>
+</head>
+<body>
+    <form id="contact-form">
+        <input type="text" name="user_name" placeholder="Tu nombre" required />
+        <input type="email" name="user_email" placeholder="Tu email" required />
+        <textarea name="message" placeholder="Tu mensaje" required></textarea>
+        <button type="submit">Enviar Email</button>
+    </form>
+
+    <!-- Incluir EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("Dskmm59c47cnfcmWd"); // Reemplaza con tu User ID de EmailJS
+        })();
+    </script>
+
+    <script type="text/javascript">
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Previene la acción por defecto del formulario
+
+            // Enviar el formulario usando EmailJS
+            emailjs.sendForm('service_2ajarrr', 'template_biqdvfi', this)
                 .then(function() {
-                  alert('Email sent successfully!');
+                    alert('Correo enviado exitosamente!');
                 }, function(error) {
-                  alert('Failed to send email: ' + JSON.stringify(error));
+                    alert('Error al enviar el correo: ' + JSON.stringify(error));
                 });
-            });
-          </script>
-        
-    </body>
+        });
+    </script>
+</body>
+</html>
+"); // Reemplaza con tu User ID de EmailJS
+        })();
+    </script>
+
+    <script type="text/javascript">
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Previene la acción por defecto del formulario
+
+            // Enviar el formulario usando EmailJS
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+                .then(function() {
+                    alert('Correo enviado exitosamente!');
+                }, function(error) {
+                    alert('Error al enviar el correo: ' + JSON.stringify(error));
+                });
+        });
+    </script>
+</body>
 </html>
